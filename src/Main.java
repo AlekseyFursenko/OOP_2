@@ -2,7 +2,6 @@ import Units.Intellect.Monk;
 import Units.Intellect.Warlock;
 import Units.Servant.Pesant;
 import Units.Shooter.Archer;
-import Units.Shooter.Shooter;
 import Units.Shooter.XBowman;
 import Units.Unit;
 import Units.Warrior.Robber;
