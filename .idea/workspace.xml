@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2e7e9d8d-0878-4249-92df-92cfe4b971c8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Game1.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+    <list default="true" id="2e7e9d8d-0878-4249-92df-92cfe4b971c8" name="Changes" comment="Units and heroes sets">
+      <change afterPath="$PROJECT_DIR$/src/Units/Names.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Units/UnitInrfce.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Units/Intellect/Monk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Intellect/Monk.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Units/Intellect/Warlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Intellect/Warlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Units/Servant/Pesant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Servant/Pesant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Units/Shooter/Archer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Shooter/Archer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Units/Shooter/XBowman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Shooter/XBowman.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Units/Unit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Unit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Units/Warrior/Robber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Warrior/Robber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Units/Warrior/Spearman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Warrior/Spearman.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +24,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -70,6 +76,28 @@
       <option name="presentableId" value="Default" />
       <updated>1678195297917</updated>
     </task>
+    <task id="LOCAL-00001" summary="Units and heroes sets">
+      <created>1678359616338</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1678359616338</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Units and heroes sets">
+      <created>1678360071628</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1678360071628</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Units and heroes sets">
+      <created>1678360123761</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1678360123761</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -83,15 +111,8 @@
       </map>
     </option>
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>20</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Units and heroes sets" />
+    <option name="LAST_COMMIT_MESSAGE" value="Units and heroes sets" />
   </component>
 </project>

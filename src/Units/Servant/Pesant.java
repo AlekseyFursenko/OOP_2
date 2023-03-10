@@ -4,8 +4,8 @@ public class Pesant extends Servant{
 
     int delivery;
 
-    public Pesant() {
-        super("Pesant",
+    public Pesant(String name) {
+        super(name,
                 1,
                 new int[] {1,1},
                 3,
@@ -24,4 +24,15 @@ public class Pesant extends Servant{
     }
 
     public void to_delivery(){};
+
+    @Override
+    public void step(){
+        System.out.println("Yes, my lord!");
+    }
+    @Override
+    public void getInfo() {
+        System.out.println(String.format("Name: %s  Hp: %d  Type: %s Delivery: %d ",
+                NAME, (int)(this.hp), this.getClass().getSimpleName(), this.delivery));
+    }
+
 }

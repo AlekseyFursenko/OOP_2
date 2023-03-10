@@ -1,7 +1,7 @@
 package Units;
 
-public abstract class Unit {
-    protected String name;
+public abstract class Unit implements UnitInrfce{
+    protected final String NAME;
     protected float hp;
     protected int[] damage;
     protected int speed;
@@ -10,7 +10,7 @@ public abstract class Unit {
     protected boolean alive;
 
     public Unit(String name, float hp, int[] damage, int speed, int attack, int defence, boolean alive) {
-        this.name = name;
+        NAME = name;
         this.hp = hp;
         this.damage = damage;
         this.speed = speed;
@@ -19,8 +19,8 @@ public abstract class Unit {
         this.alive = alive;
     }
 
-    public String getName() {
-        return name;
+    public void getName() {
+        System.out.println(NAME);
     }
 
     public float getHp() {
@@ -33,10 +33,6 @@ public abstract class Unit {
 
     public int getSpeed() {
         return speed;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public void setHp(float hp) {
@@ -81,9 +77,17 @@ public abstract class Unit {
 
     public void to_die(){};
 
-    public String getInfo() {
-        return String.format("Name: %s  Hp: %d  Type: %s",
-                this.name, (int)(this.hp), this.getClass().getSimpleName());
+    @Override
+    public void getInfo() {
+        System.out.println(String.format("Name: %s  Hp: %d  Type: %s",
+                NAME, (int)(this.hp), this.getClass().getSimpleName()));
+    }
+
+    @Override
+    public void step() {
+
+        System.out.println("Step!");
+
     }
 
 }
