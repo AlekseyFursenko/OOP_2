@@ -10,6 +10,7 @@ import Units.Warrior.Spearman;
 import Units.Warrior.Warrior;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.Random;
 
 public class Main {
@@ -17,6 +18,7 @@ public class Main {
 
         ArrayList<Unit> whiteBand = new ArrayList<>();
         ArrayList<Unit> darkBand = new ArrayList<>();
+        ArrayList<Unit> stackBand = new ArrayList<>();
 
         for (int i = 0; i < 10; i++) {
             int n = new Random().nextInt(40)/10;
@@ -48,12 +50,23 @@ public class Main {
             }
         }
 
-        System.out.println("White band:");
-        whiteBand.forEach(unit -> unit.getInfo());
-        System.out.println("Dark band:");
-        darkBand.forEach(unit -> unit.getInfo());
+        stackBand.addAll(whiteBand);
+        stackBand.addAll(darkBand);
+        // sort by speed
+        stackBand.sort(new Comparator<Unit>() {
+            @Override
+            public int compare(Unit o1, Unit o2) {
+                return (o1.getSpeed() - o2.getSpeed());
+            }
+        });
+
+        stackBand.forEach(unit -> unit.getInfo());
+        stackBand.forEach(unt -> unt.step(whiteBand, darkBand));
+
 
     }
+
+
     private static String getName(){
         return Names.values()[new Random().nextInt(Names.values().length)].toString();
     }

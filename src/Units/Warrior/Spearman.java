@@ -1,5 +1,9 @@
 package Units.Warrior;
 
+import Units.Unit;
+
+import java.util.ArrayList;
+
 public class Spearman extends Warrior{
     public Spearman(String name) {
         super(name,
@@ -12,7 +16,7 @@ public class Spearman extends Warrior{
     }
 
     @Override
-    public void step() {
+    public void step(ArrayList<Unit> enemies, ArrayList<Unit> friends) {
         System.out.println("We are under attack!");
     }
 

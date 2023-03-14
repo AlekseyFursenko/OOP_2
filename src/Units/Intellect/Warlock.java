@@ -1,5 +1,9 @@
 package Units.Intellect;
 
+import Units.Unit;
+
+import java.util.ArrayList;
+
 public class Warlock extends Intellect{
     int healing;
 
@@ -26,7 +30,7 @@ public class Warlock extends Intellect{
     public void to_heal(){};
 
     @Override
-    public void step(){
+    public void step(ArrayList<Unit> enemies, ArrayList<Unit> friends){
         System.out.println("I call upon the ancient power!");
     }
     @Override

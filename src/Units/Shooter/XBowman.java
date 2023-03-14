@@ -1,5 +1,9 @@
 package Units.Shooter;
 
+import Units.Unit;
+
+import java.util.ArrayList;
+
 public class XBowman extends Shooter{
 
     public XBowman(String name) {
@@ -14,10 +18,10 @@ public class XBowman extends Shooter{
                 16);
     }
 
-    @Override
-    public void step() {
-        System.out.println("Here is my crossbow!");
-    }
+    //@Override
+    //public void step(ArrayList<Unit> enimies, ArrayList<Unit> friends) {
+    //    System.out.println("Here is my crossbow!");
+    //}
 
     @Override
     public void getInfo() {

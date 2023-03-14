@@ -1,5 +1,9 @@
 package Units.Shooter;
 
+import Units.Unit;
+
+import java.util.ArrayList;
+
 public class Archer extends Shooter{
 
     public Archer(String name) {
@@ -14,10 +18,10 @@ public class Archer extends Shooter{
                 32);
     }
 
-    @Override
-    public void step() {
-        System.out.println("Please, tell me, where am I aiming now?");
-    }
+    //@Override
+    //public void step(ArrayList<Unit> enemies, ArrayList<Unit> friends) {
+    //    System.out.println("Please, tell me, where am I aiming now?");
+    //}
     @Override
     public void getInfo() {
         System.out.println(String.format("Name: %s  Hp: %d  Type: %s Shoots: %d ",

@@ -1,6 +1,9 @@
 package Units.Shooter;
 
+import Units.Servant.Pesant;
 import Units.Unit;
+
+import java.util.ArrayList;
 
 public abstract class Shooter extends Unit {
     int  shoot_dist;
@@ -29,4 +32,27 @@ public abstract class Shooter extends Unit {
     }
 
     public void take_aim(){};
+
+    @Override
+    public void step(ArrayList<Unit> enemies, ArrayList<Unit> friends) {
+        if(this.shoots>0 && this.alive== true){
+            System.out.println("Please, tell me, where am I aiming now?");
+            for (Unit unit:enemies){
+                if(unit.getHp()>0){
+                    this.to_attack(unit, this.damage);
+                    this.shoots--;
+                    break;
+                }
+            }
+
+            for (Unit unit : friends) {
+                if (unit.equals("Pesant") && unit.isAlive() == true) {
+                    this.shoots++;
+                    break;
+                }
+            }
+        }
+
+
+    }
 }

@@ -1,5 +1,9 @@
 package Units.Servant;
 
+import Units.Unit;
+
+import java.util.ArrayList;
+
 public class Pesant extends Servant{
 
     int delivery;
@@ -26,7 +30,7 @@ public class Pesant extends Servant{
     public void to_delivery(){};
 
     @Override
-    public void step(){
+    public void step(ArrayList<Unit> enemies, ArrayList<Unit> friends){
         System.out.println("Yes, my lord!");
     }
     @Override

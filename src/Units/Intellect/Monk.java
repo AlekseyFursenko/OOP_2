@@ -1,6 +1,9 @@
 package Units.Intellect;
 
+import Units.Unit;
 import Units.UnitInrfce;
+
+import java.util.ArrayList;
 
 public class Monk extends Intellect {
     int healing;
@@ -32,7 +35,7 @@ public class Monk extends Intellect {
     public void to_heal(){};
 
     @Override
-    public void step(){
+    public void step(ArrayList<Unit> enemies, ArrayList<Unit> friends){
         System.out.println("Amen to that, brother!");
     }
     @Override
