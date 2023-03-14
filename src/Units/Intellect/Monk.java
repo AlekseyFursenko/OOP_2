@@ -40,8 +40,8 @@ public class Monk extends Intellect {
     }
     @Override
     public void getInfo() {
-        System.out.println(String.format("Name: %s  Hp: %d  Type: %s Mana: %s ",
-                NAME, (int)(this.hp), this.getClass().getSimpleName(), this.magic_mana));
+        System.out.println(String.format("Name: %s  Hp: %d Speed: %s Type: %s Mana: %s ",
+                NAME, (int)(this.hp), this.getSpeed(), this.getClass().getSimpleName(), this.magic_mana));
     }
 
 }

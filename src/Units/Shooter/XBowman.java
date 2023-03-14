@@ -25,8 +25,8 @@ public class XBowman extends Shooter{
 
     @Override
     public void getInfo() {
-        System.out.println(String.format("Name: %s  Hp: %d  Type: %s Shoots: %d ",
-                NAME, (int)(this.hp), this.getClass().getSimpleName(), this.shoots));
+        System.out.println(String.format("Name: %s  Hp: %d Speed: %s  Type: %s Shoots: %d ",
+                NAME, (int)(this.hp), this.getSpeed(), this.getClass().getSimpleName(), this.shoots));
     }
 
 }

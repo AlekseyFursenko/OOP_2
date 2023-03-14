@@ -35,8 +35,8 @@ public class Pesant extends Servant{
     }
     @Override
     public void getInfo() {
-        System.out.println(String.format("Name: %s  Hp: %d  Type: %s Delivery: %d ",
-                NAME, (int)(this.hp), this.getClass().getSimpleName(), this.delivery));
+        System.out.println(String.format("Name: %s  Hp: %d Speed: %s  Type: %s Delivery: %d ",
+                NAME, (int)(this.hp), this.getSpeed(), this.getClass().getSimpleName(), this.delivery));
     }
 
 }

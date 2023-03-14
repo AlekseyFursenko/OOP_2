@@ -56,14 +56,11 @@ public class Main {
         stackBand.sort(new Comparator<Unit>() {
             @Override
             public int compare(Unit o1, Unit o2) {
-                return (o1.getSpeed() - o2.getSpeed());
+                return (o2.getSpeed() - o1.getSpeed());
             }
         });
 
         stackBand.forEach(unit -> unit.getInfo());
-        stackBand.forEach(unt -> unt.step(whiteBand, darkBand));
-
-
     }
 
 

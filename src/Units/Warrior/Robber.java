@@ -22,8 +22,8 @@ public class Robber extends Warrior{
 
     @Override
     public void getInfo() {
-        System.out.println(String.format("Name: %s  Hp: %d  Type: %s Attack: %d ",
-                NAME, (int)(this.hp), this.getClass().getSimpleName(), this.attack));
+        System.out.println(String.format("Name: %s  Hp: %d Speed: %s  Type: %s Attack: %d ",
+                NAME, (int)(this.hp), this.getSpeed(), this.getClass().getSimpleName(), this.attack));
     }
 
 }
