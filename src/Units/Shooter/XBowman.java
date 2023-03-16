@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public class XBowman extends Shooter{
 
-    public XBowman(String name) {
+    public XBowman(String name, int x, int y) {
         super(name,
                 10,
                 new int[] {2,3},
@@ -15,13 +15,9 @@ public class XBowman extends Shooter{
                 3,
                 true,
                 5,
-                16);
+                16,
+                x, y);
     }
-
-    //@Override
-    //public void step(ArrayList<Unit> enimies, ArrayList<Unit> friends) {
-    //    System.out.println("Here is my crossbow!");
-    //}
 
     @Override
     public void getInfo() {

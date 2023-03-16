@@ -7,7 +7,7 @@ import java.util.ArrayList;
 public class Warlock extends Intellect{
     int healing;
 
-    public Warlock(String name) {
+    public Warlock(String name, int x, int y) {
         super(name,
                 30,
                 new int[] {-5,-5},
@@ -15,7 +15,8 @@ public class Warlock extends Intellect{
                 17,
                 12,
                 true,
-                1);
+                1,
+                x, y);
         this.healing = 5;
     }
 

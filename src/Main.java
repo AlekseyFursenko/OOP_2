@@ -7,7 +7,6 @@ import Units.Shooter.XBowman;
 import Units.Unit;
 import Units.Warrior.Robber;
 import Units.Warrior.Spearman;
-import Units.Warrior.Warrior;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -24,13 +23,13 @@ public class Main {
             int n = new Random().nextInt(40)/10;
 
             switch (n){
-                case 0: whiteBand.add(new Pesant(getName()));
+                case 0: whiteBand.add(new Pesant(getName(), 0, i));
                         break;
-                case 1: whiteBand.add(new Monk(getName()));
+                case 1: whiteBand.add(new Monk(getName(), 0, i));
                     break;
-                case 2: whiteBand.add(new Archer(getName()));
+                case 2: whiteBand.add(new Archer(getName(),0, i));
                     break;
-                case 3: whiteBand.add(new Spearman(getName()));
+                case 3: whiteBand.add(new Spearman(getName(), 0, i));
                     break;
             }
         }
@@ -39,13 +38,13 @@ public class Main {
             int n = new Random().nextInt(40)/10;
 
             switch (n){
-                case 0: darkBand.add(new Pesant(getName()));
+                case 0: darkBand.add(new Pesant(getName(), 9, i));
                     break;
-                case 1: darkBand.add(new Warlock(getName()));
+                case 1: darkBand.add(new Warlock(getName(), 9, i));
                     break;
-                case 2: darkBand.add(new XBowman(getName()));
+                case 2: darkBand.add(new XBowman(getName(), 9, i));
                     break;
-                case 3: darkBand.add(new Robber(getName()));
+                case 3: darkBand.add(new Robber(getName(), 9, i));
                     break;
             }
         }
@@ -60,7 +59,19 @@ public class Main {
             }
         });
 
-        stackBand.forEach(unit -> unit.getInfo());
+        //stackBand.forEach(unit -> unit.getInfo());
+        System.out.println("\nSorted");
+        for (Unit unit : stackBand) System.out.println(unit.toString() + " " + unit.getPosition());
+
+        System.out.println("\nLet start the War!:");
+        System.out.println("\nWhite turn!");
+        for (Unit unit : whiteBand) {
+            unit.step(darkBand, whiteBand);
+        }
+        System.out.println("\nDark turn!");
+        for (Unit unit : darkBand) {
+            unit.step(whiteBand, darkBand);
+        }
     }
 
 

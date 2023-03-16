@@ -8,14 +8,15 @@ public class Pesant extends Servant{
 
     int delivery;
 
-    public Pesant(String name) {
+    public Pesant(String name, int x, int y) {
         super(name,
                 1,
                 new int[] {1,1},
                 3,
                 1,
                 1,
-                true);
+                true,
+                x, y);
         this.delivery = 1;
     }
 

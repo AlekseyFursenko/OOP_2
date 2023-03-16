@@ -5,14 +5,15 @@ import Units.Unit;
 import java.util.ArrayList;
 
 public class Spearman extends Warrior{
-    public Spearman(String name) {
+    public Spearman(String name, int x, int y) {
         super(name,
                 10,
                 new int[] {1,3},
                 4,
                 4,
                 5,
-                true);
+                true,
+                x, y);
     }
 
     @Override

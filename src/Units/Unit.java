@@ -10,10 +10,9 @@ public abstract class Unit implements UnitInrfce{
     protected int attack;
     protected int defence;
     protected boolean alive;
-    protected int posX;
-    protected int posY;
+    protected Position position;
 
-    public Unit(String name, float hp, int[] damage, int speed, int attack, int defence, boolean alive) {
+    public Unit(String name, float hp, int[] damage, int speed, int attack, int defence, boolean alive, int x, int y) {
         NAME = name;
         this.hp = hp;
         this.damage = damage;
@@ -21,6 +20,7 @@ public abstract class Unit implements UnitInrfce{
         this.attack = attack;
         this.defence = defence;
         this.alive = alive;
+        position = new Position(x,y);
     }
 
     public void getName() {
@@ -83,33 +83,33 @@ public abstract class Unit implements UnitInrfce{
 
     public void to_move(int speed){}
 
+    public String getPosition() {
+        return String.format("x = % d, y = %d", position.getX(), position.getY());
+    }
+
+    protected Unit findNearest(ArrayList<Unit> team) {
+        float minDist = 10;// максимальный размер игрового поля
+        int index = 0;
+        for (int i = 0; i < team.size(); i++) {
+            float dist = position.getDist(team.get(i).position);
+            if (dist < minDist && team.get(i).isAlive()) {
+                minDist = dist;
+                index = i;
+            }
+        }
+        return team.get(index);
+    }
+
     public void to_attack(Unit enemy, int[] damage) {
         float hurt = (damage[1] + damage[0]) / 2;
         enemy.setHp(hurt);
-        System.out.printf("%s to attack %s\t", this.getClass().getSimpleName(), enemy.getClass().getSimpleName());
-        System.out.printf(" Hurt = %d\n", hurt);
-        System.out.printf("%s hp= %.2f\n", enemy.getClass().getSimpleName(), enemy.getHp());
+        System.out.printf("%s %s has attacked %s %s\t", this.getClass().getSimpleName(),NAME, enemy.getClass().getSimpleName(), enemy.NAME);
+        System.out.printf(" Hurt = %f\n", hurt);
+        System.out.printf("%s %s hp= %.2f\n", enemy.getClass().getSimpleName(), enemy.NAME, enemy.getHp());
 
     }
 
     public boolean to_die(){ return this.alive = false;};
-
-    public int getPosX() {
-        return posX;
-    }
-
-    public void setPosX(int posX) {
-        this.posX = posX;
-    }
-
-    public int getPosY() {
-        return posY;
-    }
-
-    public void setPosY(int posY) {
-        this.posY = posY;
-    }
-
 
     @Override
     public void getInfo() {
@@ -122,6 +122,12 @@ public abstract class Unit implements UnitInrfce{
 
         System.out.println("Step!");
 
+    }
+
+    @Override
+    public String toString() {
+        return String.format("Name: %-11s  Hp: %-3d Speed: %-3s  Type: %-11s",
+                NAME, (int)(this.hp), this.getSpeed(), this.getClass().getSimpleName());
     }
 
 }
