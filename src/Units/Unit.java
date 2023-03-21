@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public abstract class Unit implements UnitInrfce{
     protected final String NAME;
     protected float hp;
+    protected int maxHp;
     protected int[] damage;
     protected int speed;
     protected int attack;
@@ -12,20 +13,24 @@ public abstract class Unit implements UnitInrfce{
     protected boolean alive;
     protected Position position;
 
-    public Unit(String name, float hp, int[] damage, int speed, int attack, int defence, boolean alive, int x, int y) {
+    public Unit(String name, int maxHp, int[] damage, int speed, int attack, int defence, boolean alive, int x, int y) {
         NAME = name;
-        this.hp = hp;
+        this.maxHp = maxHp;
+        this.hp = maxHp;
         this.damage = damage;
         this.speed = speed;
         this.attack = attack;
         this.defence = defence;
         this.alive = alive;
         position = new Position(x,y);
+
     }
 
     public void getName() {
         System.out.println(NAME);
     }
+
+    public String getTYPE(){ return String.format(this.getClass().getSimpleName());}
 
     public float getHp() {
         return hp;
@@ -83,8 +88,8 @@ public abstract class Unit implements UnitInrfce{
 
     public void to_move(int speed){}
 
-    public String getPosition() {
-        return String.format("x = % d, y = %d", position.getX(), position.getY());
+    public Position getPosition() {
+        return position;
     }
 
     protected Unit findNearest(ArrayList<Unit> team) {
@@ -126,8 +131,7 @@ public abstract class Unit implements UnitInrfce{
 
     @Override
     public String toString() {
-        return String.format("Name: %-11s  Hp: %-3d Speed: %-3s  Type: %-11s",
-                NAME, (int)(this.hp), this.getSpeed(), this.getClass().getSimpleName());
+        return String.format("\t%-12s\t⚔️ %-3d\t\uD83D\uDEE1 %-3d\t♥️%-3d%%", this.getTYPE(), attack, defence, (int)(hp * 100 / maxHp));
     }
 
 }

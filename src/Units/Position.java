@@ -20,4 +20,8 @@ public class Position {
     public float getDist(Position pos) {
         return (float) Math.sqrt(Math.pow((this.x-pos.getX()), 2) + Math.pow((this.y - pos.getY()), 2));
     }
+
+    public boolean isEquals(Position position) {
+        return this.x == position.getX() && this.y == position.getY();
+    }
 }

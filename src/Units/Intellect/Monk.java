@@ -8,8 +8,8 @@ import java.util.ArrayList;
 public class Monk extends Intellect {
     int healing;
 
-    public Monk(String name, float hp, int[] damage, int speed, int attack, int defence, boolean alive, int healing, int magic_mana, int x, int y) {
-        super(name, hp, damage, speed, attack, defence, alive, magic_mana,x,y);
+    public Monk(String name, int maxHp, int[] damage, int speed, int attack, int defence, boolean alive, int healing, int magic_mana, int x, int y) {
+        super(name, maxHp, damage, speed, attack, defence, alive, magic_mana,x,y);
         this.healing = healing;
     }
 

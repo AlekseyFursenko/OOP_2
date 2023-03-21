@@ -9,8 +9,8 @@ public abstract class Shooter extends Unit {
     int  shoot_dist;
     int shoots;
 
-    public Shooter(String name, float hp, int[] damage, int speed, int attack, int defence, boolean alive, int shoot_dist, int shoots, int x, int y) {
-        super(name, hp, damage, speed, attack, defence, alive, x, y);
+    public Shooter(String name, int maxHp, int[] damage, int speed, int attack, int defence, boolean alive, int shoot_dist, int shoots, int x, int y) {
+        super(name, maxHp, damage, speed, attack, defence, alive, x, y);
         this.shoot_dist = shoot_dist;
         this.shoots = shoots;
     }

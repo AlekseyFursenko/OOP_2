@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2e7e9d8d-0878-4249-92df-92cfe4b971c8" name="Changes" comment="Shooter step_1">
-      <change afterPath="$PROJECT_DIR$/src/Units/Position.java" afterDir="false" />
+    <list default="true" id="2e7e9d8d-0878-4249-92df-92cfe4b971c8" name="Changes" comment="Shooter step_1__5 lesson 4">
+      <change afterPath="$PROJECT_DIR$/src/AnsiColors.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ConsoleView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Presenter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Units/Intellect/Intellect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Intellect/Intellect.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Units/Intellect/Monk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Intellect/Monk.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Units/Intellect/Warlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Intellect/Warlock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Units/Servant/Pesant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Servant/Pesant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Units/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Position.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Units/Servant/Servant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Servant/Servant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Units/Shooter/Archer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Shooter/Archer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Units/Shooter/Shooter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Shooter/Shooter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Units/Shooter/XBowman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Shooter/XBowman.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Units/Unit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Unit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Units/Warrior/Robber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Warrior/Robber.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Units/Warrior/Spearman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Warrior/Spearman.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Units/Warrior/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Warrior/Warrior.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,7 +47,8 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true"
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "settings.editor.selected.configurable": "editor.preferences.tabs"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -121,7 +121,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678810552276</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Shooter step_1__5 lesson 4">
+      <created>1678988087468</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1678988087468</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -138,6 +145,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Units and heroes sets" />
     <MESSAGE value="Shooter step_1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Shooter step_1" />
+    <MESSAGE value="Shooter step_1__5 lesson 4" />
+    <option name="LAST_COMMIT_MESSAGE" value="Shooter step_1__5 lesson 4" />
   </component>
 </project>
