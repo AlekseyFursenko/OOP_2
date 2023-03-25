@@ -16,6 +16,13 @@ public class Position {
         return y;
     }
 
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public void setY(int y) {
+        this.y = y;
+    }
 
     public float getDist(Position pos) {
         return (float) Math.sqrt(Math.pow((this.x-pos.getX()), 2) + Math.pow((this.y - pos.getY()), 2));

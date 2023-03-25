@@ -57,4 +57,12 @@ public class Model {
         return Names.values()[new Random().nextInt(Names.values().length)].toString();
     }
 
+    public static boolean bandAlive(ArrayList<Unit> band){
+        for (Unit unit : band) {
+            if (unit.isAlive()) return true;
+        }
+
+        return false;
+    }
+
 }

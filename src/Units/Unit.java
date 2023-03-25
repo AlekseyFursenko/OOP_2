@@ -1,10 +1,15 @@
 package Units;
 
+import com.sun.tools.javac.Main;
+
 import java.util.ArrayList;
 
 public abstract class Unit implements UnitInrfce{
     protected final String NAME;
     protected float hp;
+
+
+
     protected int maxHp;
     protected int[] damage;
     protected int speed;
@@ -32,6 +37,7 @@ public abstract class Unit implements UnitInrfce{
 
     public String getTYPE(){ return String.format(this.getClass().getSimpleName());}
 
+    public int getMaxHp() { return maxHp; }
     public float getHp() {
         return hp;
     }
@@ -46,7 +52,7 @@ public abstract class Unit implements UnitInrfce{
 
     public void setHp(float hurt) {
         if (this.hp - hurt > 0) {
-            this.hp -= hurt;
+            this.hp = Math.min(hp - hurt, maxHp);
         }
         else{
             this.hp = 0;
@@ -86,14 +92,12 @@ public abstract class Unit implements UnitInrfce{
         this.alive = alive;
     }
 
-    public void to_move(int speed){}
-
     public Position getPosition() {
         return position;
     }
 
     protected Unit findNearest(ArrayList<Unit> team) {
-        float minDist = 10;// максимальный размер игрового поля
+        float minDist = 15;// максимальный размер игрового поля
         int index = 0;
         for (int i = 0; i < team.size(); i++) {
             float dist = position.getDist(team.get(i).position);
@@ -105,28 +109,65 @@ public abstract class Unit implements UnitInrfce{
         return team.get(index);
     }
 
-    public void to_attack(Unit enemy, int[] damage) {
-        float hurt = (damage[1] + damage[0]) / 2;
+    public void to_attack(Unit enemy, float hurt) {
         enemy.setHp(hurt);
         System.out.printf("%s %s has attacked %s %s\t", this.getClass().getSimpleName(),NAME, enemy.getClass().getSimpleName(), enemy.NAME);
         System.out.printf(" Hurt = %f\n", hurt);
         System.out.printf("%s %s hp= %.2f\n", enemy.getClass().getSimpleName(), enemy.NAME, enemy.getHp());
 
     }
+    public void to_heal(Unit friend, float heal) {
+        friend.setHp(heal);
+        System.out.printf("%s %s has healed %s %s\t", this.getClass().getSimpleName(),NAME, friend.getClass().getSimpleName(), friend.NAME);
+        System.out.printf(" Hurt = %f\n", heal);
+        System.out.printf("%s %s hp= %.2f\n", friend.getClass().getSimpleName(), friend.NAME, friend.getHp());
+
+    }
 
     public boolean to_die(){ return this.alive = false;};
+
+    public void move(Unit target, ArrayList<Unit> friends) {
+        Position temp = this.position;
+        int dX = this.position.getX() - target.position.getX();
+        int dY = this.position.getY() - target.position.getY();
+        if (Math.abs(dX) >= Math.abs(dY)) {
+            if (dX > 0) {
+                temp.setX(temp.getX() - 1);
+                if (checkCells(temp, friends)) {
+                    this.position.setX(this.position.getX() - 1);
+                }
+            } else {
+                temp.setX(temp.getX() + 1);
+                if (checkCells(temp, friends)) {
+                    this.position.setX(this.position.getX() + 1);
+                }
+            }
+        } else {
+            if (dY > 0) {
+                temp.setY(temp.getY() - 1);
+                if (checkCells(temp, friends)) {
+                    this.position.setY(this.position.getY() - 1);
+                }
+            } else {
+                temp.setY(temp.getY() + 1);
+                if (checkCells(temp, friends)) {
+                    this.position.setY(this.position.getY() + 1);
+                }
+            }
+        }
+    }
+
+    public boolean checkCells(Position newPosition, ArrayList<Unit> friends) {
+        for (Unit friend : friends) {
+            if (newPosition.isEquals(friend.position)) return false;
+        }
+        return true;
+    }
 
     @Override
     public void getInfo() {
         System.out.println(String.format("Name: %s  Hp: %d  Type: %s",
                 NAME, (int)(this.hp), this.getClass().getSimpleName()));
-    }
-
-    @Override
-    public void step(ArrayList<Unit> enimies, ArrayList<Unit> friends) {
-
-        System.out.println("Step!");
-
     }
 
     @Override

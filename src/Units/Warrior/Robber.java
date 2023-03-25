@@ -18,7 +18,8 @@ public class Robber extends Warrior{
 
     @Override
     public void step(ArrayList<Unit> enemies, ArrayList<Unit> friends) {
-        System.out.println("It'll be painless, I promise.");
+        if(alive){System.out.println("It'll be painless, I promise.");}
+        super.step(enemies,friends);
     }
 
     @Override

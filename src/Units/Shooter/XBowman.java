@@ -25,4 +25,11 @@ public class XBowman extends Shooter{
                 NAME, (int)(this.hp), this.getSpeed(), this.getClass().getSimpleName(), this.shoots));
     }
 
+    @Override
+    public void step(ArrayList<Unit> enemies, ArrayList<Unit> friends) {
+        if (alive) {
+            System.out.println("Here is my bolt!");
+        }
+        super.step(enemies, friends);
+    }
 }

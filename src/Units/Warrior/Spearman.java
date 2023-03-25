@@ -18,7 +18,8 @@ public class Spearman extends Warrior{
 
     @Override
     public void step(ArrayList<Unit> enemies, ArrayList<Unit> friends) {
-        System.out.println("We are under attack!");
+        if(alive){System.out.println("We are under attack!");}
+        super.step(enemies, friends);
     }
 
     @Override

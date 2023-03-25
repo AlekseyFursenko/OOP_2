@@ -16,7 +16,6 @@ public class Presenter {
             Main.darkBand.get(i).step(Main.whiteBand, Main.darkBand);
             Main.whiteBand.get(i).step(Main.darkBand, Main.whiteBand);
         }
-        ConsoleView.view();
     };
 
 

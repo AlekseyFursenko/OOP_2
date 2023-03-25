@@ -36,10 +36,9 @@ public abstract class Shooter extends Unit {
     @Override
     public void step(ArrayList<Unit> enemies, ArrayList<Unit> friends) {
         if(this.shoots>0 && this.alive== true){
-            System.out.println("Please, tell me, where am I aiming now?");
             Unit nearestEnemy = findNearest(enemies);
             System.out.println(nearestEnemy);
-            this.to_attack(nearestEnemy, this.damage);
+            this.to_attack(nearestEnemy, damage[0]);
             this.shoots --;
 
             for (Unit unit : friends) {

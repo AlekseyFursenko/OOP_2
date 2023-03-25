@@ -32,7 +32,8 @@ public class Pesant extends Servant{
 
     @Override
     public void step(ArrayList<Unit> enemies, ArrayList<Unit> friends){
-        System.out.println("Yes, my lord!");
+
+        if(alive){System.out.println("Yes, my lord!");}
     }
     @Override
     public void getInfo() {

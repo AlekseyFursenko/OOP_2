@@ -10,11 +10,12 @@ public class App {
         ConsoleView.view();
 
         Scanner in = new Scanner(System.in);
-        for (int i = 0; i < 10; i++) {
+        while (Model.bandAlive(Main.whiteBand) && Model.bandAlive(Main.darkBand) ) {
             presenter.step();
+            ConsoleView.view();
             System.out.println("Press any key");
             in.nextLine();
             }
-
+        ConsoleView.view();
         }
     }

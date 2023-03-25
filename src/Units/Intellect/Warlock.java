@@ -32,7 +32,8 @@ public class Warlock extends Intellect{
 
     @Override
     public void step(ArrayList<Unit> enemies, ArrayList<Unit> friends){
-        System.out.println("I call upon the ancient power!");
+        if(alive){System.out.println("I call upon the ancient power!");}
+        super.step(enemies,friends);
     }
     @Override
     public void getInfo() {

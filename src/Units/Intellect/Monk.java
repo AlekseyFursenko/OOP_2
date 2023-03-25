@@ -37,8 +37,10 @@ public class Monk extends Intellect {
 
     @Override
     public void step(ArrayList<Unit> enemies, ArrayList<Unit> friends){
-        System.out.println("Amen to that, brother!");
+        if(alive){System.out.println("Amen to that, brother!");}
+        super.step(enemies,friends);
     }
+
     @Override
     public void getInfo() {
         System.out.println(String.format("Name: %s  Hp: %d Speed: %s Type: %s Mana: %s ",

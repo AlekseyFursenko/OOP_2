@@ -25,5 +25,13 @@ public class Archer extends Shooter{
                 NAME, (int)(this.hp), this.getSpeed(), this.getClass().getSimpleName(), this.shoots));
     }
 
+    @Override
+    public void step(ArrayList<Unit> enemies, ArrayList<Unit> friends) {
+        if (alive) {
+            System.out.println("Please, tell me, where am I aiming now?");
+        }
+        super.step(enemies, friends);
+    }
+
 }
 
